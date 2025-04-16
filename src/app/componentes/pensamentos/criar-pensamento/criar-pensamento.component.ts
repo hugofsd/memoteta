@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pensamento } from '../pensamento';
 import { PensamentoService } from '../pensamento.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -20,20 +20,48 @@ export class CriarPensamentoComponent implements OnInit {
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
-      conteudo: ['Formulario reativo'],
-      autoria: ['Angular'],
+      conteudo: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.pattern(/(.|\s)*\S(.|\s)*/), //  não permite que sejam colocados apenas espaços vazios.
+        ]),
+      ],
+      autoria: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(3), //tamanho minimo
+        ]),
+      ],
       modelo: ['modelo1'],
     });
   }
 
   criarPensamento() {
-    //alert('Novo pensamento criado');
-    this.service.criar(this.formulario.value).subscribe(() => {
-      this.router.navigate(['/listarPensamento']);
-    });
+    if (this.formulario.valid) {
+      // se o form for valido
+      this.service.criar(this.formulario.value).subscribe(() => {
+        console.log(this.formulario.valid);
+        //console.log(this.formulario);
+        this.router.navigate(['/listarPensamento']);
+      });
+    } else {
+      alert('Forumulário incompleto');
+      console.log(this.formulario.valid);
+      //console.log(this.formulario);
+    }
   }
 
   cancelarPensamento() {
     this.router.navigate(['/listarPensamento']);
+  }
+
+  habilitarBotao(): string {
+    if (this.formulario.valid) {
+      return 'botao';
+    } else {
+      return 'botao__desabilitado';
+    }
   }
 }
