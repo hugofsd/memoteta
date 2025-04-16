@@ -31,3 +31,6 @@ cd backend
 npm install                # instala json-server
 cd ..
 ```
+## Preview
+
+![Tela principal do Memoteca](docs/screenshot.png)
