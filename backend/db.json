@@ -4,43 +4,50 @@
       "id": 1,
       "conteudo": "Que bom que vc veio",
       "autoria": "Nay",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": 2,
       "conteudo": "Estudando Angular",
       "autoria": "Dev ",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "conteudo": "Estudando Angular",
       "autoria": "Marcos",
       "modelo": "modelo1",
-      "id": 3
+      "id": 3,
+      "favorito": true
     },
     {
       "conteudo": "Em “Fluxo de Cidades”, 2‑4 jogadores competem para expandir metrópoles modulando rios magnéticos. Hexágonos variáveis formam o mapa; cartas de energia alteram correntes, movendo distritos flutuantes. Pontuam combo de recursos, arte pública e conexões de transporte sustentável em sete turnos finais!",
       "autoria": "Luan",
       "modelo": "modelo1",
-      "id": 4
+      "id": 4,
+      "favorito": false
     },
     {
       "conteudo": "Formulario reativo",
       "autoria": "Angular",
       "modelo": "modelo2",
-      "id": 5
+      "id": 5,
+      "favorito": false
     },
     {
       "conteudo": "Teste ",
       "autoria": "Angular 2",
       "modelo": "modelo3",
-      "id": 6
+      "id": 6,
+      "favorito": false
     },
     {
       "conteudo": "Olá Mundo !",
       "autoria": "Angular",
       "modelo": "modelo1",
-      "id": 7
+      "id": 7,
+      "favorito": true
     }
   ]
 }
