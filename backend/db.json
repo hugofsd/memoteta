@@ -5,13 +5,13 @@
       "conteudo": "Que bom que vc veio",
       "autoria": "Nay",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 2,
       "conteudo": "Estudando Angular",
-      "autoria": "Dev ",
-      "modelo": "modelo3",
+      "autoria": "Hugo",
+      "modelo": "modelo2",
       "favorito": false
     },
     {
